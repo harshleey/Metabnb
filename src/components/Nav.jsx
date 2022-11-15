@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from "../assets/images/header-nft/logo.svg"
-import {FaBars, FaTimes} from "react-icons/Fa"
+import {FaBars, FaTimes} from "react-icons/fa"
 import { useState } from 'react'
 
 const Nav = () => {
