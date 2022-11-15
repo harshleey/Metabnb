@@ -60,6 +60,7 @@ a {
   padding: 1.8em 5%;
   margin-bottom: 2em;
   transition: all 400ms linear;
+  position: relative;
 }
 
 .logo {
@@ -86,15 +87,14 @@ a {
 .header-links {
   display: none;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: rgb(160, 34, 121);
   color: #fff;
-  width: 500px;
+  width: 100%;
   height: 100vh;
   text-align: center;
-  transform-origin: all 400ms linear;
 }
 
 .navbar-links {
@@ -145,6 +145,80 @@ a {
   background-color: var(--purple-color);
   color: #fff;
 }
+
+/* CONNECT WALLET */
+.connect-wallet {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 100vh;
+  left: 0;
+  top: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.active-connect {
+  top: 0;
+  z-index: 10;
+}
+
+.connect-wallet p {
+  font-weight: 600;
+}
+
+.connect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 0.2em 1em;
+  margin-bottom: 1em;
+}
+
+.inner-wallet {
+  background-color: #fff;
+  width: 90%;
+  border-radius: 8px;
+  max-width: 500px;
+  position: relative;
+}
+
+.inner-wallet small {
+  padding: 0.5em 1em;
+  margin-bottom: 3em;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0.5em 1em;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border-radius: 7px;
+  border: 1px solid gainsboro
+}
+
+.dropdown .dropdown-logo {
+  height: 35px;
+}
+
+.connect-times {
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.connect-times:hover {
+  color: red;
+}
+
+
 
 /* HEADER */
 .header {
@@ -256,27 +330,28 @@ a {
 }
 
 .home-rentals-grid .grid-card {
-  margin: 0 auto;
-  margin-bottom: 1.2em;
   padding: 1em;
+  width: 70%;
   border: 1px solid grey;
   border-radius: 8px;
-  /* width: 60%; */
-  max-width: 57%;
+  margin: 0 auto;
+  margin-bottom: 1.2em;
+  
+
 }
 
 .home-rentals-grid .grid-card > img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .card-top-details,
 .card-bottom-details {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   text-align: left;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
+  font-size: 0.9em;
 }
 
 .home-rentals-grid .grid-card .price {
@@ -285,17 +360,13 @@ a {
 
 .ratings {
   text-align: left;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .ratings > img {
   margin-right: 2.5px;
 }
-
- 
-
-
 
 /* SECTION-ACCENT */
 .accent-section {
@@ -350,6 +421,48 @@ a {
   margin: -37% 10% 0 23%;
 }
 
+/* PLACES */
+
+.filter-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  margin: 0 auto;
+  /* background-color: yellow; */
+}
+
+.places-links,
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em
+} 
+
+.places-links {
+  width: 75%;
+  flex-wrap: wrap;
+}
+
+.location {
+  width: 18%;
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding:0.5em 0.6em;
+  margin-right: 2em
+}
+
+@media screen and (max-width: 800px) {
+  .places-links li {
+    width: 25%;
+  }
+
+  .location {
+    width: 24%;
+    margin: 0;
+  }
+}
 
 /* FOOTER */
 footer {
@@ -561,6 +674,6 @@ footer ul li a {
 
 .active {
   display: block;
-  /* the element is transposed 300px to the left of where it's supposed to be */
-  transition: all 400ms linear
 }
+
+
