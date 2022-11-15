@@ -273,6 +273,7 @@ a {
   width: 70%;
   padding: 0.878em 1.5em;
   border-radius: 8px 0px 0 8px;
+  background-color: #fff;
   outline: none;
   border: 1px solid gray;
   border-right-color: transparent;
