@@ -331,13 +331,11 @@ a {
 
 .home-rentals-grid .grid-card {
   padding: 1em;
-  width: 70%;
+  width: 90%;
   border: 1px solid grey;
   border-radius: 8px;
   margin: 0 auto;
   margin-bottom: 1.2em;
-  
-
 }
 
 .home-rentals-grid .grid-card > img {
@@ -424,33 +422,30 @@ a {
 /* PLACES */
 
 .filter-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 96%;
+  padding: 0.4em;
   margin: 0 auto;
-  /* background-color: yellow; */
-}
-
-.places-links,
-.location {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5em
-} 
-
-.places-links {
-  width: 75%;
   flex-wrap: wrap;
 }
 
+.places-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+} 
+
 .location {
-  width: 18%;
   border: 1px solid grey;
   border-radius: 7px;
-  padding:0.5em 0.6em;
-  margin-right: 2em
+  display: flex;
+  align-items: center;
+  padding: 5px
+  /* padding:em 0.6em; */
+}
+
+.location img {
+  margin-left: 10px
 }
 
 @media screen and (max-width: 800px) {

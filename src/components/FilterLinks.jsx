@@ -12,11 +12,15 @@ const FilterLinks = () => {
                 <li>Carbins</li>
                 <li>Off-grid</li>
                 <li>Farm</li>
+                <li className="location">
+                    Location
+                    <img src={filterIcon} alt="" /> 
+                </li>
             </ul>
-            <div className="location">
-                <span>Location</span>
-                <img src={filterIcon} alt="" /> 
-            </div>
+            {/* <div className="location">
+                <span></span>
+                
+            </div> */}
         </div>
     )
 }
