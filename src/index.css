@@ -1,0 +1,566 @@
+/* ===========
+    FONT
+  ============ */
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Red Rose', cursive;
+}
+
+:root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000;
+  background-color: rgba(255, 255, 255, 100%);
+
+  --purple-color: rgb(160, 34, 121);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*===============
+  GLOBAL STYLING
+  =============== */
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* HOME CONTAINER */
+.home-container {
+  position: relative;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8em 5%;
+  margin-bottom: 2em;
+  transition: all 400ms linear;
+}
+
+.logo {
+  height: 28px;
+}
+
+.bars,
+.times {
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.times {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  transition: all 400ms linear;
+}
+
+.times:hover {
+  color: #000;
+}
+
+.header-links {
+  display: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(160, 34, 121);
+  color: #fff;
+  width: 500px;
+  height: 100vh;
+  text-align: center;
+  transform-origin: all 400ms linear;
+}
+
+.navbar-links {
+  padding: 6em 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-links li {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-size: 1.2em;
+}
+
+.navbar-links li a {
+  color: #fff;
+  font-weight: 400;
+  transition: all 400ms linear;
+}
+
+.navbar-links li a:hover {
+  color: #000;
+}
+
+.btn {
+  background-color: none;
+  border: none;
+  padding: 0.7em 2em;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn-wallet {
+  background-color: #fff;
+  color: var(--purple-color);
+  transition: all 400ms linear;
+  font-weight: 500;
+}
+
+.btn-wallet:hover {
+  color: #000;
+}
+
+.search-submit {
+  background-color: var(--purple-color);
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  padding: 0 5%;
+  /* margin: 0 auto; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  width: 100%;
+} 
+
+.header p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+.header-nfts {
+  display: flex;
+  margin: 0 auto;
+}
+
+.head-nft{
+  display: flex;
+  flex-direction: column;
+}
+
+.left-nft {
+  margin-top: 15%;
+  margin-right: 2em;
+}
+
+.head-nft img {
+  width: 100%;
+  margin: 0.2em
+}
+
+.accent {
+  color:rgba(160, 34, 121, 100%)
+}
+
+.search-space {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.search-space input {
+  width: 70%;
+  padding: 0.878em 1.5em;
+  border-radius: 8px 0px 0 8px;
+  outline: none;
+  border: 1px solid gray;
+  border-right-color: transparent;
+}
+
+.search-space button {
+  width: 30%
+}
+
+.search-submit {
+  border-radius: 0 8px 8px 0;
+  padding: 0.7em 2em;
+}
+
+
+/* SPONSORS */
+.sponsors {
+  background-color: rgb(160, 34, 121);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5em 8%;
+  margin: 2em 0;
+}
+
+.sponsor-logo {
+  height: 35px;
+  margin: 0 0 30px 0;
+}
+
+@media screen and (min-width: 800px) {
+  .sponsors {
+    flex-direction: row;
+  }
+  
+  .sponsor-logo {
+    height: 35px;
+    margin: 0 0 0px 0;
+  }
+}
+
+/* GRID SECTION */
+.home-rentals {
+  padding: 2em 5%;
+  /* background-color: yellow; */
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.home-rentals h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.4em;
+  line-height: 1.3;
+}
+
+.home-rentals-grid .grid-card {
+  margin: 0 auto;
+  margin-bottom: 1.2em;
+  padding: 1em;
+  border: 1px solid grey;
+  border-radius: 8px;
+  /* width: 60%; */
+  max-width: 57%;
+}
+
+.home-rentals-grid .grid-card > img {
+  max-width: 100%;
+}
+
+.card-top-details,
+.card-bottom-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.home-rentals-grid .grid-card .price {
+  font-weight: 700;
+}
+
+.ratings {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.ratings > img {
+  margin-right: 2.5px;
+}
+
+ 
+
+
+
+/* SECTION-ACCENT */
+.accent-section {
+  text-align: center;
+  background-color: rgb(160, 34, 121);
+  padding: 7% 8%;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.accent-section h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.4em;
+}
+
+.accent-section p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 200;
+  margin-bottom: 2.5em;
+}
+
+.learn-more {
+  color: rgb(160, 34, 121)
+}
+
+.accent-content {
+  margin-bottom: 3em;
+}
+
+.accent-images {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.accent-images > img {
+  width: 75%;
+}
+
+.accent-images .metabnb-nft-1 {
+  margin: 0 0 0 27%;
+}
+
+.accent-images .metabnb-nft-2 {
+  margin: -35% 10% 0 -30%;
+}
+
+.accent-images .metabnb-nft-3 {
+  margin: -37% 10% 0 23%;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1% 5%;
+  text-align: center;
+}
+
+.footer {
+  display: flex;  
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer ul li {
+  font-weight: 100;
+  margin-bottom: 0.3em;
+} 
+
+footer ul li a {
+  color: #fff;
+}
+
+.social-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 27%;
+  margin: 0 auto;
+}
+
+.socials {
+  margin-bottom: 0.7em;
+}
+
+
+
+.footer-logo {
+  height: 30px;
+  margin: 1.2em 0 4em 0;
+}
+
+.copyright {
+  font-weight: 200;
+}
+
+
+@media screen and (min-width: 750px) {
+  .home-rentals-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .home-rentals-grid .grid-card {
+    margin: 0;
+    width: 48%;
+  }
+} 
+
+@media screen and (min-width: 800px) {
+  .home-rentals-grid .grid-card {
+    width: 31.8%;
+  }
+}
+
+
+
+@media screen and (min-width: 950px) {
+  .bars,
+  .times {
+    display: none;
+  }
+
+  .header-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgb(160, 34, 121);
+    color: #000;
+    width: 65%;
+    height: 0;
+    text-align: left;
+  }
+
+   .header {
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+  } 
+
+  .header-content {
+    width: 50%;
+  }
+
+  .header-nfts {
+    display: flex;
+    gap: 0.4em
+  }
+
+  .head-nft{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-nft {
+    margin-top: 15%;
+    margin-right: 0.4em;
+  }
+
+  .navbar-links {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .navbar-links li {
+    text-align: left;
+    margin: 0 25px 0px 0;
+    font-size: 1.1em;
+  }
+
+  .navbar-links li a {
+    color: #000;
+  }
+  
+  .navbar-links li a:hover {
+    color: rgb(160, 34, 121);
+  }
+
+  .btn-wallet {
+    background-color: var(--purple-color);
+    color: #fff;
+    transition: all 400ms linear;
+    font-weight: 500;
+  }
+
+  .accent-section {
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6% 5%;
+  }
+
+  .accent-section p {
+    line-height: 1.7;
+  }
+
+  .accent-content {
+    width: 40%;
+    padding: 1.5em;
+  }
+
+  .accent-images {
+    width: 54%;
+    margin: 0;
+  }
+
+  .accent-images > img{
+    max-width: 65%;
+  }
+
+  .accent-images .metabnb-nft-3 {
+    margin: -30% 10% 0 27%;
+  }
+
+  footer {
+    text-align: left;
+    padding: 1.3em 8%;
+  }
+
+  .footer {
+    display: flex;  
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .social-logo {
+    width: 50%;
+    margin: 0 ;
+  }
+
+  .home-rentals {
+    font-size: 0.7em;
+    padding: 4em 5%;
+    gap: 1.7em;
+  }
+
+  .home-rentals-grid .grid-card {
+    width: 23.9%;
+  }
+
+  .card-top-details,
+  .card-bottom-details {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .ratings {
+    width: 100%;
+  }
+  
+}
+
+.active {
+  display: block;
+  /* the element is transposed 300px to the left of where it's supposed to be */
+  transition: all 400ms linear
+}
