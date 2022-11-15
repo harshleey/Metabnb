@@ -4,7 +4,7 @@ import {FaBars, FaTimes} from "react-icons/fa"
 import { useState } from 'react'
 import metamask from "../assets/images/connect-walllet/meta-mask.svg"
 import walletConnect from "../assets/images/connect-walllet/wallet-connect.svg"
-import arrow from "../assets/images/connect-walllet/down chevron.svg"
+import arrow from "../assets/images/connect-walllet/down-arrow.svg"
 
 const Nav = () => {
     const [toggleBars, setToggleBars] = useState(false)
